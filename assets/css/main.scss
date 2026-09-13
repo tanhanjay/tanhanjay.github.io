@@ -37,3 +37,81 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/*
+ * ==========================================================================
+ *  自定义覆盖样式（放在最后，优先级最高）
+ *  作者：滕浩钧 主页定制
+ * ========================================================================== */
+
+/* --- 头像：移动端也保持足够大的尺寸 --- */
+.author__avatar {
+  /* 移动端（窄屏）：头像放大到 96px，并居中显示 */
+  width: 96px;
+  text-align: center;
+  margin: 0 auto 12px;
+
+  img {
+    width: 96px;
+    height: 96px;
+    max-width: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+    border: 2px solid var(--global-border-color);
+  }
+
+  /* 桌面端（≥1024px）：恢复到主题默认的大头像 */
+  @media screen and (min-width: 1024px) {
+    width: auto;
+    display: block;
+    margin: 0;
+
+    img {
+      width: 100%;
+      max-width: 175px;
+      height: auto;
+      padding: 5px;
+      border: 1px solid var(--global-border-color);
+    }
+  }
+}
+
+/* --- 移动端：头像下方文字居中，信息更紧凑 --- */
+.author__content {
+  @media screen and (max-width: 1023px) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+
+.author__name {
+  @media screen and (max-width: 1023px) {
+    margin-top: 8px;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+}
+
+.sidebar .author__urls-wrapper {
+  @media screen and (max-width: 1023px) {
+    text-align: center;
+  }
+}
+
+/* --- 移动端正文可读性微调 --- */
+@media screen and (max-width: 1023px) {
+  .page__content {
+    font-size: 15px;
+  }
+
+  /* 面包屑/标题间距收紧 */
+  .page__title {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+  }
+}
