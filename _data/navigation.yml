@@ -1,0 +1,19 @@
+# 顶部导航菜单
+main:
+  - title: "首页"
+    url: /
+
+  - title: "个人简介"
+    url: /cv/
+
+  - title: "论文发表"
+    url: /publications/
+
+  - title: "科研项目"
+    url: /projects/
+
+  - title: "教学"
+    url: /teaching/
+
+  - title: "旧博客"
+    url: /blog/

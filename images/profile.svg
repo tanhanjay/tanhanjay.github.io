@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b31b1b"/>
+      <stop offset="100%" stop-color="#6e1010"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg)"/>
+  <circle cx="250" cy="195" r="82" fill="#ffffff" opacity="0.95"/>
+  <path d="M 110 500 Q 110 330 250 330 Q 390 330 390 500 Z" fill="#ffffff" opacity="0.95"/>
+  <text x="250" y="225" font-family="'Noto Sans CJK SC', 'WenQuanYi Zen Hei', serif"
+        font-size="92" fill="#b31b1b" text-anchor="middle" font-weight="bold">滕</text>
+</svg>

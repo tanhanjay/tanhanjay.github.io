@@ -1,0 +1,238 @@
+# ============================================================
+#  滕浩钧 (Haojun Teng) — 学术主页
+#  Academic Pages 模板 · Jekyll · GitHub Pages
+#  https://tanhanjay.github.io
+# ============================================================
+
+# ---- 基础站点设置 ----
+locale                   : "zh-CN"
+site_theme               : "default"       # 可选: default, air, sunrise, mint, dirt, contrast
+title                    : "滕浩钧 | Haojun Teng"
+title_separator          : "-"
+name                     : &name "滕浩钧"
+description              : &description "烟台大学计算机与控制工程学院讲师 — 群智感知 · 边缘计算 · 强化学习"
+url                      : "https://tanhanjay.github.io"
+baseurl                  : ""
+repository               : "tanhanjay/tanhanjay.github.io"
+
+# ---- 侧边栏作者信息 ----
+author:
+  avatar                 : "profile.png"
+  name                   : "滕浩钧"
+  pronouns               :
+  bio                    : "烟台大学<br>计算机与控制工程学院<br>讲师 · 工学博士"
+  location               : "山东烟台"
+  employer               : "烟台大学"
+  uri                      :
+  email                  : "tenghaojun@ytu.edu.cn"
+
+  # 学术站点（没有的留空，不会显示图标）
+  academia               :
+  arxiv                  :
+  googlescholar          :
+  inspire-hep            :
+  impactstory            :
+  orcid                  :
+  semantic               :
+  ssrn                   :
+  pubmed                 :
+  researchgate           :
+  scopus                 :
+  zotero                 :
+
+  # 代码仓库
+  bitbucket              :
+  codepen                :
+  dribbble               :
+  github                 : "tanhanjay"
+  kaggle                 :
+  stackoverflow          :
+
+  # 社交媒体
+  artstation             :
+  bluesky                :
+  facebook               :
+  flickr                 :
+  foursquare             :
+  goodreads              :
+  google_plus            :
+  keybase                :
+  instagram              :
+  lastfm                 :
+  linkedin               :
+  mastodon               :
+  medium                 :
+  pinterest              :
+  soundcloud             :
+  steam                  :
+  telegram               :
+  tumblr                 :
+  twitter                :
+  vine                   :
+  weibo                  :
+  wikipedia              :
+  xing                   :
+  youtube                :
+  zhihu                  :
+
+# ---- 论文分类 ----
+publication_category:
+  books:
+    title: '专著'
+  manuscripts:
+    title: '期刊论文'
+  conferences:
+    title: '会议论文'
+
+# ---- 站点设置 ----
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+comments:
+  provider               : false
+
+atom_feed:
+  hide                   : false
+  path                   :
+
+# ---- SEO ----
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# ---- 分享 ----
+twitter:
+  username               : &twitter
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
+og_description           :
+
+social:
+  type                   :
+  name                   :
+  links:
+
+# ---- 统计 ----
+analytics:
+  provider               : "false"
+  google:
+    tracking_id          :
+
+# ---- 文件包含/排除 ----
+include:
+  - .htaccess
+  - _pages
+  - files
+
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+
+keep_files:
+  - .git
+  - .svn
+
+encoding                 : "utf-8"
+markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
+
+# ---- 集合 ----
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+# ---- 默认值 ----
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: false
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
