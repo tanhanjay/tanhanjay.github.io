@@ -42,44 +42,54 @@
  * ==========================================================================
  *  自定义覆盖样式（放在最后，优先级最高）
  *  作者：滕浩钧 主页定制
+ *
+ *  注意：主题在 <img> 上也挂了 .author__avatar 类，因此必须用
+ *  .author__avatar img 选择器才能覆盖，且要处理 925px~1023px 断点空档。
  * ========================================================================== */
 
-/* --- 头像：移动端也保持足够大的尺寸 --- */
+/* --- 头像：移动端保持醒目尺寸 --- */
 .author__avatar {
-  /* 移动端（窄屏）：头像放大到 96px，并居中显示 */
-  width: 96px;
   text-align: center;
-  margin: 0 auto 12px;
+}
 
-  img {
-    width: 96px;
-    height: 96px;
-    max-width: 96px;
-    object-fit: cover;
-    border-radius: 50%;
-    padding: 0;
-    border: 2px solid var(--global-border-color);
-  }
+.author__avatar img,
+img.author__avatar {
+  /* 移动端（< 1024px）：头像放大到 120px，圆形居中 */
+  width: 120px;
+  height: 120px;
+  max-width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 0;
+  border: 3px solid var(--global-border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto 14px;
+}
 
-  /* 桌面端（≥1024px）：恢复到主题默认的大头像 */
-  @media screen and (min-width: 1024px) {
+/* --- 桌面端（≥1024px）：恢复主题的大头像风格 --- */
+@media screen and (min-width: 1024px) {
+  .author__avatar {
     width: auto;
     display: block;
     margin: 0;
+  }
 
-    img {
-      width: 100%;
-      max-width: 175px;
-      height: auto;
-      padding: 5px;
-      border: 1px solid var(--global-border-color);
-    }
+  .author__avatar img,
+  img.author__avatar {
+    width: 100%;
+    max-width: 175px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid var(--global-border-color);
+    box-shadow: none;
+    margin: 0;
   }
 }
 
 /* --- 移动端：头像下方文字居中，信息更紧凑 --- */
-.author__content {
-  @media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
+  .author__content {
     display: block;
     width: 100%;
     padding-left: 0;
@@ -87,29 +97,21 @@
     text-align: center;
     line-height: 1.5;
   }
-}
 
-.author__name {
-  @media screen and (max-width: 1023px) {
+  .author__name {
     margin-top: 8px;
     margin-bottom: 6px;
     text-align: center;
   }
-}
 
-.sidebar .author__urls-wrapper {
-  @media screen and (max-width: 1023px) {
+  .sidebar .author__urls-wrapper {
     text-align: center;
   }
-}
 
-/* --- 移动端正文可读性微调 --- */
-@media screen and (max-width: 1023px) {
   .page__content {
     font-size: 15px;
   }
 
-  /* 面包屑/标题间距收紧 */
   .page__title {
     font-size: 1.6em;
     margin-bottom: 0.5em;
