@@ -89,6 +89,32 @@ img.author__avatar {
 
 /* --- 移动端：头像下方文字居中，信息更紧凑 --- */
 @media screen and (max-width: 1023px) {
+  /* 头像容器：主题默认 display:table-cell，宽度会收缩到内容宽，
+     导致内部 img 的 margin:auto 无处水平居中。小屏下强制转 block 并占满整行。 */
+  .sidebar .author__avatar,
+  .author__avatar {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto 14px !important;
+  }
+
+  /* 头像图片：120px 圆形，水平居中 */
+  .sidebar .author__avatar img,
+  .author__avatar img,
+  img.author__avatar {
+    display: block !important;
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+    margin: 0 auto !important;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+    border: 3px solid var(--global-border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  }
+
   .author__content {
     display: block;
     width: 100%;
