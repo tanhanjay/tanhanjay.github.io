@@ -56,20 +56,3 @@ ul.r-list li { margin: 0.45rem 0; line-height: 1.7; }
 <div class="c-note">数据采集、清洗、转换与预处理全流程</div>
 </div>
 </div>
-
----
-
-<h2 class="research-h">研究方向与招生</h2>
-
-我的研究聚焦于 **群智感知**、**边缘计算** 与 **强化学习**，重点解决：
-
-<ul class="r-list">
-<li>移动群智感知网络中的<b>工作者招募</b>与<b>激励机制设计</b></li>
-<li>异构网络环境下的<b>任务调度</b>与<b>资源分配</b></li>
-<li>移动边缘计算中的<b>任务卸载</b>与<b>收益优化</b></li>
-<li><b>多智能体强化学习</b>在多空间协同中的应用</li>
-</ul>
-
-欢迎对上述方向感兴趣的同学邮件联系交流。
-
-<svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> [tenghaojun@ytu.edu.cn](mailto:tenghaojun@ytu.edu.cn)
